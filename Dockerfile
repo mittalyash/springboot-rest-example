@@ -1,5 +1,5 @@
 FROM java:8
-MAINTAINER Srinivas "nmsrinivas@gmail.com"
+MAINTAINER Kiran "kiranbdvt@gmail.com"
 
 EXPOSE 9080
 
