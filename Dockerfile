@@ -4,6 +4,6 @@ MAINTAINER Kiran "kiranbdvt@gmail.com"
 COPY . .
 EXPOSE 9080
 
-ADD /usr/src/target/books-example-1.0-SNAPSHOT.jar  /application.jar
+ADD /var/lib/jenkins/workspace/springRestAppl_localbranch/target/books-example-1.0-SNAPSHOT.jar  /books-example-1.0-SNAPSHOT.jar
 
-CMD java -jar /application.jar
+CMD java -jar /books-example-1.0-SNAPSHOT.jar
