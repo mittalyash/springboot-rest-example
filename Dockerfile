@@ -4,4 +4,4 @@ MAINTAINER Kiran "kiranbdvt@gmail.com"
 COPY . .
 EXPOSE 9080
 
-CMD java -jar target/books-example-1.0-SNAPSHOT.jar
+CMD java -jar /target/books-example-1.0-SNAPSHOT.jar
