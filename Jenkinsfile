@@ -27,9 +27,9 @@ stages {
   stage('Docker Build'){
         steps {
         script {
-         sh 'sudo docker build -t appimage .'
+         sh 'sudo docker build -t deeptish29/appimage .'
          sh "sudo docker login -u=$env.dockername -p=$env.dockerpass"
-         sh 'sudo docker push'
+         sh "sudo docker push deeptish29/appimage"
          
         }
         }
