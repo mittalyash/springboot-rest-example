@@ -28,6 +28,7 @@ stages {
         steps {
         script {
          sh 'sudo docker build -t appimage .'
+         sh 'sudo docker push'
          
         }
         }
