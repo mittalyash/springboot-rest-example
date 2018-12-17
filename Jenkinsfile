@@ -12,9 +12,9 @@ stages {
       stage('Build customer app code'){
         steps {
         script {
-         sh 'sudo apt-get -y update'
+         sh 'sudo apt-get update'
          sh 'sudo apt-get -y install default-jdk'
-         sh 'sudo apt-get -y maven'
+         sh 'sudo apt-get -y install maven'
        sh 'mvn clean install'
        }
       }
