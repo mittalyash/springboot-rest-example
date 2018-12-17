@@ -26,6 +26,7 @@ stages {
     sh 'sudo docker build -t mittalyash32/myapp .'
      sh " sudo docker login -u=$env.dockerid -p=$env.dockerpassword"
      sh " sudo docker push mittalyash32/myapp "
+     sh "sudo docker run -p 8081:9080 mittalyash32/myapp "
    
         }
    }
