@@ -1,6 +1,6 @@
 FROM java:8
 WORKDIR /usr/src
-MAINTAINER Kiran "kiranbdvt@gmail.com"
+MAINTAINER Yash "mittalyash32@gmail.com"
 COPY . .
 EXPOSE 9080
 
