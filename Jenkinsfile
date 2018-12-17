@@ -24,7 +24,7 @@ stages {
   steps{
    script{
     sh 'sudo docker build -t mittalyash32/myapp .'
-     sh 'sudo docker login --username=$env.dockerid --password=$env.dockerpassword'
+     sh 'sudo docker login --username="$env.dockerid" --password="$env.dockerpassword"'
    
         }
    }
