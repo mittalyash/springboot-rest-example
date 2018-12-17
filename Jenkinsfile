@@ -28,7 +28,7 @@ stages {
         steps {
         script {
          sh 'sudo docker build -t appimage .'
-         sh 'sudo docker login --env.username='dockeruser' --env.password='dockerpass''
+         sh 'sudo docker login --env.username='dockername' --env.password='dockerpass''
          sh 'sudo docker push'
          
         }
