@@ -24,5 +24,13 @@ stages {
        }
       }
      }
-    }
+  stage('Docker Build'){
+        steps {
+        script {
+         sh 'sudo docker build -t appimage .'
+         
+        }
+        }
+  }
+ }
 }
