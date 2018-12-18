@@ -24,10 +24,10 @@ stages {
  stage('Docker Build and push'){
   steps{
    script{
-    sh 'sudo docker build -t deeptish29/myapp .'
-     sh " sudo docker login -u=$env.dockername -p=$env.dockerpass"
-     sh " sudo docker push deeptish29/myapp "
-     sh "sudo docker run -p 8081:9080 deeptish29/myapp "
+    sh 'sudo docker build -t mittalyash32/myapp .'
+     sh " sudo docker login -u=$env.dockerid -p=$env.dockerpassword"
+     sh " sudo docker push mittalyash32/myapp "
+     sh "sudo docker run -p 8081:9080 mittalyash32/myapp "
    
         }
    }   
