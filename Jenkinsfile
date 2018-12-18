@@ -30,7 +30,7 @@ stages {
          sh 'sudo docker build -t deeptish29/appimage .'
          sh "sudo docker login -u=$env.dockername -p=$env.dockerpass"
          sh "sudo docker push deeptish29/appimage"
-         sh "sudo docker run -p 8082:9080 deeptish29/appimage"
+         sh "sudo docker run -p 8080:9080 deeptish29/appimage"
         }
         }
   }
