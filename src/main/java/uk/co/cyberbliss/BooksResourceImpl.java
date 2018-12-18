@@ -78,7 +78,7 @@ public class BooksResourceImpl implements BooksResource {
         List<Book> books = booksRepo.getAllBooks();
         books.forEach(book -> {
             book.removeLinks();
-            book.add(linkTo(methodOn(BooksResourceImpl.class).getBookByIsbn(book.getIsbn())).withSelfRel());
+           // book.add(linkTo(methodOn(BooksResourceImpl.class).getBookByIsbn(book.getIsbn())).withSelfRel());
         });
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
