@@ -17,7 +17,7 @@ stages {
          sh 'sudo apt-get -y install default-jdk'
          sh 'sudo apt-get -y install maven'
        sh 'mvn clean install -Dmaven.test.skip=true'
-          sh'mvn clean test site'
+          sh'mvn test site'
        }
       }
      }
