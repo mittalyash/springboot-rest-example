@@ -36,6 +36,6 @@ spec:
   - protocol: TCP
     port: 9080
     targetPort: 9080
-    nodePort: 30003
+    nodePort: 30004
   selector:
     app: sampleapp
