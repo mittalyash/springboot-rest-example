@@ -2,6 +2,7 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: sampleapp-deployment
+  namespace: devops3
   labels:
     app: sampleapp
 spec:
@@ -26,6 +27,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: sampleapp
+  namespace: devops3
   labels:
     app: sampleapp
 spec:
