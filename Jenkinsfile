@@ -37,11 +37,11 @@ stages {
 
   stage('Deploy on Kubernetes'){
     
-    kubernetesDeploy {
+    kubernetesDeploy (
      kubeconfigId: 'kubeconfig',
      configs: 'ApplicationDeployment.yaml',
        enableConfigSubstitution: false      
-    }
+    )
     
   }
  }
