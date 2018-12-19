@@ -28,13 +28,22 @@ stages {
      sh " sudo docker login -u=$env.dockerid -p=$env.dockerpassword"
      sh " sudo docker push mittalyash32/myapp "
      //sh "sudo docker run -p 8081:9080 mittalyash32/myapp "
-     sh "kubectl create -f ApplicationDeployment.yaml -n devops3"
+     //sh "kubectl create -f ApplicationDeployment.yaml -n devops3"
    
         }
    }   
    
   }
 
+  stage('Deploy on Kubernetes'){
+    
+    kubernetesDeploy {
+     kubeconfigId: 'kubeconfig',
+     config: 'ApplicationDeployment.yaml',
+       enableConfigSubstitution: false      
+    }
+    
+  }
  }
 
 }
