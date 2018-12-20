@@ -2,14 +2,14 @@ pipeline {
   
  agent any
 stages {
-  stage('CodeCheckOut') {
+  stage('CodeCheckOut from GITHUB') {
     steps {
       script {
        checkout scm
        }
       }
      }      
-      stage('Build customer app code'){
+      stage('Build and test Application Code'){
         steps {
         script {
 
@@ -21,7 +21,7 @@ stages {
        }
       }
      }
- stage('Docker Build and push'){
+ stage('Build and Push Docker Image'){
   steps{
    script{
     sh ' docker build -t mittalyash32/myapp .'
@@ -35,7 +35,7 @@ stages {
    
   }
 
-  stage('Deploy on Kubernetes'){
+  stage('Deploy on Kubernetes Cluster'){
     steps{
     kubernetesDeploy (
      kubeconfigId: 'kubeconfig',
